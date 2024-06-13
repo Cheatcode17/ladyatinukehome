@@ -1,0 +1,271 @@
+{%extends "user/layout.html"%}
+		
+{% block content %}
+{%set m = get_flashed_messages(with_categories=True)%}
+                                            {%if m: %}
+                                            {%for usr,msg in m%}
+                                                {%if usr == 'error'%}
+                                                    <div class="alert alert-danger" style="text-align: center;"> {{msg}} </div>
+                                                {%else%}
+                                                    <div class="alert alert-success"  style="text-align: center;"> {{msg}} </div>
+                                                {%endif%}
+                                            {%endfor%}
+                                            {%endif%}
+		<div class="fh5co-hero">
+			<div class="fh5co-overlay"></div>
+			<div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(../static/images/images\ \(3\)_LE_auto_x2.jpg);">
+				<div class="desc animate-box">
+					<h2><strong>Donate</strong> for the <strong>Poor Children</strong></h2>
+					
+					<span><a class="btn btn-primary btn-lg" href="{{url_for('donation')}}" style="background-color: rgb(0, 0, 0);">Donate Now</a></span>
+				</div>
+			</div>
+
+		</div>
+		<!-- end:header-top -->
+		<div id="fh5co-features" style="background-color: rgb(0, 0, 0);">
+			<div class="container" style="background-color: rgb(0, 0, 0);">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="feature-left">
+							<span class="icon">
+								<i class="icon-profile-male" style="color: white;"></i>
+							</span>
+							<div class="feature-copy">
+								<h3 style="color: white;">Become a volunteer</h3>
+								<p>Join our team of dedicated volunteers and make a difference in your community.</p>
+							</div>
+						</div>
+					</div>
+		
+					<div class="col-md-4">
+						<div class="feature-left">
+							<span class="icon">
+								<i class="icon-happy" style="color: white;"></i>
+							</span>
+							<div class="feature-copy">
+								<h3 style="color: white;">Happy Giving</h3>
+								<p>Your contributions help us bring joy and support to those in need.</p>
+							</div>
+						</div>
+					</div>
+		
+					<div class="col-md-4">
+						<div class="feature-left">
+							<span class="icon">
+								<i class="icon-wallet" style="color: white;"></i>
+							</span>
+							<div class="feature-copy">
+								<h3 style="color: white;">Donation</h3>
+								<p>Your generous donations fuel our mission and expand our reach.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<div id="fh5co-feature-product" class="fh5co-section-gray">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center heading-section">
+						<h3 style="color: rgb(0, 0, 0);">Giving is Virtue.</h3>
+						<p>Join us in spreading kindness and making a positive impact in communities around the world.</p>
+					</div>
+				</div>
+		
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-12 text-center animate-box">
+						<p><img src="../static/images/IMG-20191001-WA0206.jpg" alt="Community Efforts" class="img-responsive"></p>
+					</div>
+					<div class="col-md-6 text-center animate-box">
+						<p><img src="../static/images/images_LE_auto_x2.jpg" alt="Volunteering" class="img-responsive"></p>
+					</div>
+					<div class="col-md-6 text-center animate-box">
+						<p><img src="../static/images/a.jpg" alt="Charity Work" class="img-responsive"></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="feature-text">
+							<h3>Love</h3>
+							<p>Experience the joy of giving and see how love can transform lives and bring hope to those in need.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="feature-text">
+							<h3>Compassion</h3>
+							<p>Show compassion by reaching out to those who are less fortunate and offering a helping hand.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="feature-text">
+							<h3>Charity</h3>
+							<p>Your charitable acts can make a significant difference, providing essential support to vulnerable communities.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		
+		<div id="fh5co-portfolio" style="background-color: black;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 text-center heading-section animate-box">
+						<h3 style="color: white;">Our Gallery</h3>
+						<p style="color: white;">Explore the moments of joy and impact created through our collective efforts. See how we are making a difference.</p>
+					</div>
+				</div>
+				
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-12">
+						<ul id="fh5co-portfolio-list">
+							<li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url(../static/images/img5.jpg); ">
+								<a href="../static/images/img5.jpg" data-lightbox="gallery" class="color-3">
+									<div class="case-studies-summary">
+										<span style="color: white;">Community Support</span>
+										<h2 style="color: white;">Donation is Caring</h2>
+									</div>
+								</a>
+							</li>
+							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(../static/images/wa1.jpg); ">
+								<a href="../static/images/wa1.jpg" data-lightbox="gallery" class="color-4">
+									<div class="case-studies-summary">
+										<span style="color: white;">Volunteer Work</span>
+										<h2 style="color: white;">Acts of Kindness</h2>
+									</div>
+								</a>
+							</li>
+							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(../static/images/wa2.jpg); ">
+								<a href="../static/images/wa2.jpg" data-lightbox="gallery" class="color-5">
+									<div class="case-studies-summary">
+										<span style="color: white;">Charitable Giving</span>
+										<h2 style="color: white;">Empowering Communities</h2>
+									</div>
+								</a>
+							</li>
+							<li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url(../static/images/wa3.jpg); ">
+								<a href="../static/images/wa3.jpg" data-lightbox="gallery" class="color-6">
+									<div class="case-studies-summary">
+										<span style="color: white;">Global Impact</span>
+										<h2 style="color: white;">Making a Difference</h2>
+									</div>
+								</a>
+							</li>
+						</ul>     
+						<a href="/volunteer" class="btn" style="margin-left: 40%; background-color: rgb(212, 67, 23);" > Become a volunteer ?</a>   
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		
+		
+
+		
+		<div id="fh5co-content-section" class="fh5co-section-gray">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+						<h3>Our Philanthropists</h3>
+						<p>Meet the incredible individuals whose generosity and compassion are making a significant impact in our community.</p>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="fh5co-testimonial text-center animate-box" style="background-color: black; color: white;">
+							<figure>
+								<img src="../static/images/WhatsApp Image 2024-06-07 at 16.58.54_339e7fae.jpg" alt="user">
+							</figure>
+							<blockquote>
+								<p>&ldquo;It's heartwarming to witness the positive impact of Mrs. Olaitan Odusola's donations. Her kindness brings smiles and comfort to the children every day.&rdquo;</p>
+							</blockquote>
+							<span>Olaitan Odusola</span>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="fh5co-testimonial text-center animate-box" style="background-color: black; color: white;">
+							<figure>
+								<img src="../static/images/images (6).jpeg" alt="user">
+							</figure>
+							<blockquote>
+								<p>&ldquo;Through the efforts of the David Oyedepo Foundation, we have been able to provide essential resources and a nurturing environment for the children. Their dedication is truly inspiring.&rdquo;</p>
+							</blockquote>
+							<span>David Oyedepo Foundation</span>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="fh5co-testimonial text-center animate-box" style="background-color: black; color: white;">
+							<figure>
+								<img src="../static/images/char.jpg" alt="user">
+							</figure>
+							<blockquote>
+								<p>&ldquo;It's heartwarming to see the positive impact of our donations and the smiles they bring to those who receive them.&rdquo;</p>
+							</blockquote>
+							<br>
+							<br>
+							
+							
+							<span>Dr. Mrs. Catherine Olu-Obafemi.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">  
+				<div id="fh5co-contact" class="animate-box" style="background-color: black;">
+					<div class="container">
+						<form action="#" method="post">
+							<div class="row">
+								<div class="col-md-6">
+									<h3 class="section-title" style="color: white;">Our Address</h3>
+									
+									<ul class="contact-info">
+										<li style="color: white;"><i class="icon-location-pin"></i>4, David Akerele Str., Idiroko B/Stop, Near Elijah B/Stop, Araromi <br> Off Badagry Expressway, Lagos State.</li>
+										<li style="color: white;"><i class="icon-phone2"></i>+2348166516516</li>
+										<li><i class="icon-mail"></i><a href="#" style="color: white;">admin@ladyatinukehome.org.ng</a></li>
+										<li><i class="icon-globe2"></i><a href="#" style="color: white;">www.ladyatinukeoyindamolamemorialhome.com</a></li>
+									</ul>
+								</div>
+								<div class="col-md-6">
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<input type="text" class="form-control" name="fname" placeholder="Name">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<input type="text" class="form-control" name="mail" placeholder="Email">
+											</div>
+										</div>
+										<input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+										<div class="col-md-12">
+											<div class="form-group">
+												<textarea name="msg" class="form-control" id="" cols="30" rows="7"  placeholder="Message"></textarea>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<input type="submit" value="Send Message" class="btn btn-primary">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		{%endblock%}
