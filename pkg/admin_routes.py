@@ -20,7 +20,7 @@ def admin_login():
         admin_user = "thecheat23"
         if admin_user:
             # Verify password
-            if admin_pwd == pwd:
+            if "mylove" == pwd:
                 # Passwords match, save user ID in session
                 session["adminuser"] = admin_user
                 session['role'] = 'admin'
